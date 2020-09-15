@@ -18,13 +18,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-
+    # TODO v2 is almost out with new syntax
     - name: Build-Push-DockerHub
       uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: justb4/mapproxy-mapserver
+        repository:
         tags: latest,1.12.0-7.2.2-1
         tag_with_ref: false
-        tag_with_sha: false
+        tag_with_sha: true
