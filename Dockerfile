@@ -1,4 +1,4 @@
-FROM justb4/mapproxy:1.12.0-5
+FROM justb4/mapproxy:1.13.2-1
 #
 # Extend MapProxy image with MapServer binaries. Only for local tile-seeding and -serving, NO MapServer services.
 #
