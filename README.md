@@ -18,8 +18,6 @@ The setup is similar as in the ["justb4" Docker Image for MapProxy README](https
 Only some extra config is needed for MapServer. Below an example for a `docker-compose` file.
 
 ``` 
-version: "3"
-
 services:
 
   mapproxy:

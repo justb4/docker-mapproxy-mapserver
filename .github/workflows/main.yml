@@ -5,8 +5,14 @@ name: CI
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - '**.md'
+      - 'examples/**'
   pull_request:
     branches: [ master ]
+    paths-ignore:
+      - '**.md'
+      - 'examples/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,6 +31,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: justb4/mapproxy-mapserver
-        tags: latest,1.13.2-7.2.2-2
+        tags: latest,2.0.2-8.0.0-1
         tag_with_ref: false
         tag_with_sha: true
