@@ -54,7 +54,7 @@ sources:
   labels_wms:
     type: mapserver
     req:
-      map: /mapserver/mymapfile.map
+      map: /mapserver/mapserver.conf
       layers: labels
       format: image/png
       transparent: true
@@ -81,4 +81,4 @@ globals:
 
 ```
 
-The [Mapproxy Documention](https://mapproxy.org/docs/nightly/sources.html#mapserver) shows some alternative config options.
+The [Mapproxy Documention](https://mapproxy.github.io/mapproxy/latest/sources.html#mapserver-label) shows some alternative config options.
