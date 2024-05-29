@@ -30,7 +30,6 @@ services:
       - MAPPROXY_PROCESSES=4
       - MAPPROXY_THREADS=2
       - UWSGI_EXTRA_OPTIONS=--disable-logging --max-worker-lifetime 30
-      - MS_MAPFILE=/mapserver/mymapfile.map
       - DEBUG=0
       - MAPSERVER_CATCH_SEGV=1
 
@@ -54,7 +53,7 @@ sources:
   labels_wms:
     type: mapserver
     req:
-      map: /mapserver/mapserver.conf
+      map: /mapserver/mymapfile.map
       layers: labels
       format: image/png
       transparent: true
